@@ -11,11 +11,20 @@
 
 .task-title {
   cursor: pointer;
+  font-size: 18px;
 }
 
-.remove-task-button {
+.buttons-container {
+  width: 30%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.remove-task-button,
+.see-task-details-button {
   background-color: #444;
   border: none;
-  font-size: 16px;
+  font-size: 24px;
   color: palevioletred;
+  margin: 0 5px;
 }
