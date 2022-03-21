@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import "./AddTask.css";
 import Button from './Button';
 
 const AddTask = ({handleTaskAddition}) => {
+  const history = useHistory();
+
   const [inputData, setInputData] = useState('')
 
   const handleInputChange = (e) => {
@@ -10,18 +13,11 @@ const AddTask = ({handleTaskAddition}) => {
   } 
 
   const handleAddTaskClick = () => {
-    handleTaskAddition(inputData)
-    setInputData('')
+    history.push('/new')
   }
 
   return ( 
     <div className="add-task-container">
-      <input 
-      onChange={handleInputChange} 
-      value={inputData}
-      className="add-task-input" 
-      type="text" 
-      />
       <div className="add-task-button-container">
       <Button onClick={handleAddTaskClick}>Adicionar</Button>
       </div>

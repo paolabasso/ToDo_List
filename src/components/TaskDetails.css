@@ -1,3 +1,15 @@
+textarea {
+  resize: none;
+  background: #444;
+  border: #444;
+  color: palevioletred;
+}
+
+::placeholder {
+  color: palevioletred;
+  font-weight: bold;
+}
+
 .task-details-container {
   background: #444;
   margin: 15px 0;
@@ -16,4 +28,20 @@
 .back-button-container {
   width: 30%;
   margin-top: 10px;
+}
+
+.task-container {
+  background-color: #444;
+  margin: 8px 0;
+  padding: 15px 20px;
+  display: flex;
+  border-radius: 5px;
+  justify-content: space-between;
+  color: #eee;
+  align-items: center;
+}
+
+.task-title {
+  cursor: pointer;
+  font-size: 18px;
 }
